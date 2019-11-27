@@ -5,17 +5,19 @@ setup(
     version='1.0.0',
     author='Adam Faulconbridge',
     author_email='afaulconbridge@googlemail.com',
-    packages=['TODO',],
+    packages=['TODO'],
     description='TODO.',
     long_description=open('README.txt').read(),
-    install_requires = [
+    install_requires=[
         'requests'
     ],
-    extras_require = {
-        'dev': ['pytest-cov', 'flake8', 'pip-tools'],
-    },
-    entry_points={
-        'console_scripts': ['TODO=TODO:main'],
-    },
+    extras_require={
+        'dev': [
+            'pytest-cov',
+            'flake8',
+            'pylint',
+            'pip-tools',
+            'pipdeptree'
+        ],
+    }
 )
-
