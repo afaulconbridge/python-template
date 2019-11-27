@@ -10,6 +10,6 @@ COPY . .
 RUN pip install --no-cache-dir .
 
 # TODO change this
-ENTRYPOINT ["TODO"] 
+ENTRYPOINT ["TODO"]
 # TODO change this
 CMD ["TODO"]

@@ -1,11 +1,13 @@
 import argparse
 import logging
 
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--log-config', type=str, help='log configuration file')
+    parser.add_argument('--log-config', type=str,
+                        help='log configuration file')
     parser.add_argument('--log-level', type=str, help='log level')
-    #convert parsed arguments into a dictionary
+    # convert parsed arguments into a dictionary
     args = vars(parser.parse_args())
 
     if 'log-config' in args and args['log-config'] is not None:

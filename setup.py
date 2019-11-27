@@ -17,7 +17,8 @@ setup(
             'flake8',
             'pylint',
             'pip-tools',
-            'pipdeptree'
+            'pipdeptree',
+            'pre-commit'
         ],
     }
 )
