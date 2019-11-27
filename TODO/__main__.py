@@ -1,22 +1,35 @@
 import argparse
 import logging
+import logging.config
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--log-config', type=str,
+                        default=None,
                         help='log configuration file')
-    parser.add_argument('--log-level', type=str, help='log level')
-    # convert parsed arguments into a dictionary
-    args = vars(parser.parse_args())
+    parser.add_argument('--log-critical', action='store_const',
+                        const=logging.CRITICAL, dest='log_level')
+    parser.add_argument('--log-error', action='store_const',
+                        const=logging.ERROR, dest='log_level')
+    parser.add_argument('--log-warning', action='store_const',
+                        const=logging.WARNING, dest='log_level')
+    parser.add_argument('--log-info', action='store_const',
+                        const=logging.INFO, dest='log_level',
+                        default=logging.INFO)
+    parser.add_argument('--log-debug', action='store_const',
+                        const=logging.DEBUG, dest='log_level')
+    args = parser.parse_args()
 
-    if 'log-config' in args and args['log-config'] is not None:
-        logging.config.fileConfig(args['log-config'])
-        logging.debug("Loaded config {}".format(args['log-config']))
+    logging.basicConfig(level=args.log_level)
+    if args.log_config:
+        logging.config.fileConfig(args.log_config)
 
-    if 'log-level' in args and args['log-level'] is not None:
-        logging.getLogger().setLevel(args['log-level'])
-        logging.debug("Set log level to {}".format(args['log-level']))
+    # TODO update
+    logger = logging.getLogger('TODO')
+
+    if args.log_config:
+        logger.debug("loaded log config from {}".format(args.log_config))
 
     # TODO finish
 
