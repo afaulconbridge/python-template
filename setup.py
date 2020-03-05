@@ -7,9 +7,9 @@ setup(
     author_email='afaulconbridge@googlemail.com',
     packages=['TODO'],
     description='TODO.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
-        'requests'
+        ''
     ],
     extras_require={
         'dev': [
