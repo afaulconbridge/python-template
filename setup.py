@@ -8,6 +8,8 @@ setup(
     packages=["TODO"],
     description="TODO.",
     long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/afaulconbridge/todo",
     install_requires=[""],
     extras_require={
         "dev": [
