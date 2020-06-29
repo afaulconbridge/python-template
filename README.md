@@ -1,8 +1,8 @@
 TODO
 ====
 
-[![Build Status](https://travis-ci.com/afaulconbridge/python-template.svg?branch=master)](https://travis-ci.com/afaulconbridge/python-template)
-
+[![Build Status](https://travis-ci.com/afaulconbridge/todo.svg?branch=master)](https://travis-ci.com/afaulconbridge/todo)
+[![PyPI version](https://badge.fury.io/py/todo.svg)](https://badge.fury.io/py/todo)
 
 development
 -----------
