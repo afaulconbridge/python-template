@@ -8,4 +8,5 @@ venv
 *.log
 *.egg-info
 .pytest_cache
+.mypy_cache
 dist

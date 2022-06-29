@@ -1,13 +1,11 @@
 language: python
 python:
-  - "3.8"
+  - "3.9"
 install:
-  - pip install -r requirements.txt
   - pip install .[dev]
 script:
   - pipdeptree
   - pytest tests/ -s --cov --cov-report xml:test-reports/coverage.xml --junitxml test-reports/pytest/tests.xml
   - coverage report -m
   - bash <(curl -s https://codecov.io/bash)
-  #- mypy s3seek
-
+  - mypy TODO

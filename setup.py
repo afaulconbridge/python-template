@@ -10,16 +10,8 @@ setup(
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/afaulconbridge/todo",
-    install_requires=[""],
+    install_requires=open("requirements.txt").readlines(),
     extras_require={
-        "dev": [
-            "pytest-cov",
-            "flake8",
-            "black",
-            "pylint",
-            "pip-tools",
-            "pipdeptree",
-            "pre-commit",
-        ],
+        "dev": open("requirements-dev.txt").readlines(),
     },
 )

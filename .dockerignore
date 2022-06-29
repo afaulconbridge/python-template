@@ -5,7 +5,9 @@ __pycache__
 venv
 .coverage
 .coverage.*
-.git
 *.log
 *.egg-info
 .pytest_cache
+.mypy_cache
+.git
+.circleci
